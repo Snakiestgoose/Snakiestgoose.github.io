@@ -2,6 +2,12 @@ body {
   background-color: lightblue;
 }
 
+div {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 100px;
+}
+
 h1 {
   color: red;
   text-align: center;
@@ -11,3 +17,41 @@ p {
   font-family: verdana;
   font-size: 15px;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  position: relative;
+  left: 50%;
+  transform: translate(-150px);
+}
+
+li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+}
+
+li a:hover {
+  backgroud-color: #111;
+  color: white;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+

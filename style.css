@@ -29,7 +29,7 @@ ul {
 li {
   float: left;
   position: relative;
-  left: 50%;
+  left: 45%;
   transform: translate(-150px);
 }
 

@@ -3,12 +3,17 @@
 }
 
 body {
-  background-color: lightblue;
+  background: #354349;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; 
+  overflow-x: hidden;
 }
 
-h1 {
-  color: red;
-  text-align: center;
+h2 {
+	color: white;
+	font-size: 17px;
 }
 
 h3 {
@@ -17,6 +22,14 @@ h3 {
 
 img {
 	display: inline-block;
+}
+video {
+	position: relative;
+	top: 0px;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	margin: 0px auto;
 }
 
 .column {
@@ -38,18 +51,20 @@ p {
 }
 
 ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   background-color: #333;
+  margin:0px auto;
+  left:0px;
+  right:0px;
 }
 
 li {
   float: left;
   position: relative;
-  left: 45%;
-  transform: translate(-150px);
 }
 
 li a {
@@ -72,5 +87,11 @@ li a.active {
 li a:hover:not(.active) {
   background-color: #555;
   color: white;
+}
+
+#about {
+	background: #6b8793;
+	padding: 20px;
+	margin: 0px auto;
 }
 

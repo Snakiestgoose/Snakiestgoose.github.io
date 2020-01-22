@@ -2,6 +2,22 @@
   box-sizing: border-box;
 }
 
+#video {
+	position: relative;
+	top: 25 px;
+	padding: 200px;
+	height = 1080px;
+	background = red;
+}
+
+
+
+
+
+
+
+
+
 body {
   background: #354349;
   height: 100%;

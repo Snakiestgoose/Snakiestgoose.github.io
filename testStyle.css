@@ -2,29 +2,80 @@
   box-sizing: border-box;
 }
 
+/* ID's */
 #video {
 	position: relative;
 	top: 25 px;
+	z-index: -1;
 	padding: 200px;
-	height = 1080px;
-	background = red;
+	background-color: red;
+}
+
+#about {
+	background: #6b8793;
+	padding: 20px;
+	margin: 0px auto;
+}
+
+#contact {
+	width: 100%;
+	background: #6b8793;
+}
+
+/* Classes */
+.title {
+	background-color: black;
+	color: white;
+	width: 100%;
+	margin: 0px auto;
+	top: 0;
+	font-size: 15px;
+}
+.text {
+	background-color: white;
+	color: black;
+	width: 100%;
+	padding: 20px;
+}
+
+/* Containers */
+.projectContainer {
+	display: flex;
+	justify-content: center;
+	background-color: DodgerBlue;
+}
+.projectContainer > div {
+	background-color: #f1f1f1;
+	width: 33.3%;
+	margin: 10px;
+	text-align: center;
+	line-height: 25px;
+	font-size: 15px;
+}
+.column {
+	backgroud-color: blue;
+	float: left;
+	width: 33%;
+	padding: 5px;
+	height: 200px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
 }
 
 
 
 
 
-
-
-
-
 body {
-  background: #354349;
+/*  background: #354349; */
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0; 
-  overflow-x: hidden;
 }
 div{
 	display: inline-block;
@@ -32,14 +83,12 @@ div{
 	top: 0;
 	width: 100%;
 }
-.parent {
-	display: flex;
-}
 
-.parent > div {
-	display: inline-block;
+/* Text*/
+h1 {
+	text-align: center;
+	color: white;
 }
-
 h2 {
 	color: white;
 	font-size: 17px;
@@ -49,6 +98,15 @@ h3 {
 	text-align: center;
 }
 
+p {
+  font-family: verdana;
+  font-size: 15px;
+  text-align: left;
+}
+
+
+
+/* Media */
 img {
 	display: inline-block;
 }
@@ -61,24 +119,8 @@ video {
 	margin: 0px auto;
 }
 
-.column {
-	float: left;
-	width: 33%;
-	padding: 5px;
-}
 
-.row::after {
-	content: "";
-	clear: both;
-	display: table;
-}
-
-p {
-  font-family: verdana;
-  font-size: 15px;
-  text-align: left;
-}
-
+/* Navigation Bar */
 ul {
   position: fixed;
   top: 0;
@@ -118,15 +160,4 @@ li a:hover:not(.active) {
   color: white;
 }
 
-#about {
-	background: #6b8793;
-	padding: 20px;
-	margin: 0px auto;
-}
 
-#contact {
-	width: 100%;
-	background: #6b8793;
-	padding: 20px;
-	margin: 0px auto;
-}

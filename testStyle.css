@@ -4,16 +4,17 @@
 
 /* ID's */
 #video {
-	position: relative;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+/*	position: relative;
 	top: 25 px;
 	z-index: -1;
-	padding: 200px;
-	background-color: red;
+	padding: 200px; */
 }
 
 #about {
 	background: #6b8793;
-	padding: 20px;
 	margin: 0px auto;
 }
 
@@ -41,13 +42,16 @@
 /* Containers */
 .projectContainer {
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: center;
-	background-color: DodgerBlue;
+	background-color: #f1f1f1;
+	overflow: hidden;
 }
 .projectContainer > div {
 	background-color: #f1f1f1;
 	width: 33.3%;
-	margin: 10px;
+
+	padding: 50px;
 	text-align: center;
 	line-height: 25px;
 	font-size: 15px;
@@ -79,8 +83,9 @@ body {
 }
 div{
 	display: inline-block;
-	margin: 0px auto;
-	top: 0;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
 	width: 100%;
 }
 
@@ -112,11 +117,11 @@ img {
 }
 video {
 	position: relative;
-	top: 0px;
-	left: 0;
-	right: 0;
 	z-index: -1;
-	margin: 0px auto;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	
 }
 
 

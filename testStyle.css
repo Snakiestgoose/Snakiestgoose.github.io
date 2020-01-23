@@ -6,7 +6,6 @@
 #video {
 	position: relative;
 	width: 100%;
-	overflow: hidden;
 	z-index: -1;
 /*	position: relative;
 	top: 25 px;
@@ -122,11 +121,7 @@ img {
 	display: inline-block;
 }
 video {
-	position: relative;
-	z-index: -1;
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
+	
 	
 }
 

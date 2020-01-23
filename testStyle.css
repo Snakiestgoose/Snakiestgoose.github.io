@@ -4,12 +4,14 @@
 
 /* ID's */
 #video {
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	z-index: -1;
 /*	position: relative;
 	top: 25 px;
-	z-index: -1;
+	
 	padding: 200px; */
 }
 
@@ -40,6 +42,12 @@
 }
 
 /* Containers */
+.parent {
+	display: flex;
+}
+.parent > div {
+	display: inline-block;
+}
 .projectContainer {
 	display: flex;
 	flex-flow: row wrap;
@@ -47,15 +55,26 @@
 	background-color: #f1f1f1;
 	overflow: hidden;
 }
+.projectContainer > .thumbnail {
+
+}
 .projectContainer > div {
 	background-color: #f1f1f1;
 	width: 33.3%;
 
-	padding: 50px;
 	text-align: center;
 	line-height: 25px;
 	font-size: 15px;
 }
+
+.thumbnail {
+	padding: 25px;
+}
+.thumbnail a:hover {
+	padding: 15px;
+}
+
+
 .column {
 	backgroud-color: blue;
 	float: left;

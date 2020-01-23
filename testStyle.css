@@ -3,12 +3,12 @@
 }
 
 /* ID's */
-#video {
+div #video {
 	margin: 0px;
 	padding: 0px;
 	border: 0px;
-/*	position: relative;
-	top: 25 px;
+	
+/*	top: 25 px;
 	z-index: -1;
 	padding: 200px; */
 }
@@ -50,12 +50,15 @@
 .projectContainer > div {
 	background-color: #f1f1f1;
 	width: 33.3%;
+	min-width: 300px;
 
 	padding: 50px;
 	text-align: center;
 	line-height: 25px;
 	font-size: 15px;
 }
+
+/*Unused */
 .column {
 	backgroud-color: blue;
 	float: left;
@@ -80,6 +83,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0; 
+  border: 0;
 }
 div{
 	display: inline-block;
@@ -116,11 +120,11 @@ img {
 	display: inline-block;
 }
 video {
+	display: flex;
 	position: relative;
 	z-index: -1;
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
+	height: 100%;
+	width: 100%;
 	
 }
 

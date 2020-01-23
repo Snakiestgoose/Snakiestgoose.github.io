@@ -6,7 +6,7 @@
 #video {
 	position: relative;
 	width: 100%;
-	z-index: -1;
+
 /*	position: relative;
 	top: 25 px;
 	
@@ -128,6 +128,7 @@ video {
 
 /* Navigation Bar */
 ul {
+  z-index: 1;
   position: fixed;
   top: 0;
   width: 100%;

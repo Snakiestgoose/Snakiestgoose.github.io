@@ -3,13 +3,13 @@
 }
 
 /* ID's */
-div #video {
-	margin: 0px;
-	padding: 0px;
-	border: 0px;
+#video {
+	position: relative;
+	width: 100%;
+
+/*	position: relative;
+	top: 25 px;
 	
-/*	top: 25 px;
-	z-index: -1;
 	padding: 200px; */
 }
 
@@ -40,6 +40,12 @@ div #video {
 }
 
 /* Containers */
+.parent {
+	display: flex;
+}
+.parent > div {
+	display: inline-block;
+}
 .projectContainer {
 	display: flex;
 	flex-flow: row wrap;
@@ -47,31 +53,28 @@ div #video {
 	background-color: #f1f1f1;
 	overflow: hidden;
 }
+.projectContainer > .thumbnail {
+
+}
 .projectContainer > div {
 	background-color: #f1f1f1;
 	width: 33.3%;
 	min-width: 300px;
 
-	padding: 50px;
 	text-align: center;
 	line-height: 25px;
 	font-size: 15px;
 }
 
-/*Unused */
-.column {
-	backgroud-color: blue;
-	float: left;
-	width: 33%;
-	padding: 5px;
-	height: 200px;
+.thumbnail {
+	padding: 25px;
+}
+.thumbnail a:hover {
+	padding: 15px;
 }
 
-.row::after {
-	content: "";
-	clear: both;
-	display: table;
-}
+
+
 
 
 
@@ -120,17 +123,14 @@ img {
 	display: inline-block;
 }
 video {
-	display: flex;
-	position: relative;
-	z-index: -1;
-	height: 100%;
-	width: 100%;
+	
 	
 }
 
 
 /* Navigation Bar */
 ul {
+  z-index: 1;
   position: fixed;
   top: 0;
   width: 100%;
@@ -168,5 +168,23 @@ li a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
+@viewport {
+	width: device-width;
+	zoom: 1.0;
+}
 
+/*
+.column {
+	backgroud-color: blue;
+	float: left;
+	width: 33%;
+	padding: 5px;
+	height: 200px;
+}
 
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+*/

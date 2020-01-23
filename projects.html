@@ -2,27 +2,75 @@
 <html lang="en-US">
 
   <head>
-    <title>Aaron Hobgood</title>
-    <link rel="stylesheet" href="style.css">
-    <script> src="jquery-3.4.1.min.js"></script>
+    <title>Aaron</title>
+    <link rel="stylesheet" href="testStyle.css">
   </head>
 
   <body>
+	<div id="home">
+	  <ul>
+	    <li><h2>Aaron</h2></li>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="index.html#projects">Projects</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<li><a href="resume.pdf" target="_blank">Resume</a></li>
+	  </ul>
+	</div>
+	
+	<div id="projects" class="title" style="padding: 25px;">
+	  <h1>Projects</h1>
+	  <h3>Click for more details.</h3>
+	</div>
+	<!--Separate div for title
+	Container for whole section 
+		row	
+			column for picture and text section
+				link with image
+				tag container
+				description container-->
+	<div class="projectContainer">
+	
+		<div>
+		  <a href="projects.html"><img src="img/PreviewSpaceShooter.png" alt="Space Shooter Game Screen shot"
+			style="width:100%; hieght:300px;"></a>
+		  <div>Text about the project.</div>
+		</div>
+		<div>
+		  <img src="img/PreviewDrifting.png" alt="Drifting Away Typing Game screen shot"
+			style="width:100%; hieght:300px;">
+		  <div>Text about the project.</div>
+		</div>
+		<div>
+		  <img src="img/PreviewRobotLove.png" alt="Space Robot Game Jam Game"
+			style="width:100%; hieght:300px;">
+		  <div>Text about the project.</div>
+		</div>
+		<div>
+		  <img src="img/PreviewRobotLove.png" alt="Space Robot Game Jam Game"
+			style="width:100%; hieght:300px;">
+		  <div>Text about the project.</div>
+		</div>
+		<div>
+		  <img src="img/PreviewRobotLove.png" alt="Space Robot Game Jam Game"
+			style="width:100%; hieght:300px;">
+		  <div>Text about the project.</div>
+		</div>
+	  </div> 
+	</div>		
+	<br><br><br><br>
+	
+	<video style="width: 100%;" autoplay loop muted controls>
+	    <source src="videos/video.mp4" type="video/mp4">
+	    Your broswer does not support the video tag.
+	  </video>
+	  
+	<div id="contact" class="title">
+	  <h3>Contact</h3>
+	  <p style="text-align: center">My info and social links or icons.</p>
 
-    <h1>Projects</h1>
+	
 
-	<ul>
-	  <li><a href="index.html">Home</a></li>
-	  <li><a class = "active" href="projects.html">Projects</a></li>
-	  <li><a href="devlog.html">DevLog</a></li>
-	  <li><a href="contact.html">Contact</a></li> 
-	  <li><a href="resume.pdf" target="_blank">Resume</a></li>
-	</ul>
 
-    <div id="Home" class="tabcontent">
-      <h3>Projects</h3>
-      <p>School Projects and Game Jams. Web Projects</p>
-    </div>
 
   </body>
 

@@ -123,13 +123,14 @@ img {
 	display: inline-block;
 }
 video {
-	
+	display: block;
 	
 }
 
 
 /* Navigation Bar */
 ul {
+  display: inline-block;
   z-index: 1;
   position: fixed;
   top: 0;

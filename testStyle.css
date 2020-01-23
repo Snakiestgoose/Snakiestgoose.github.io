@@ -75,19 +75,7 @@
 }
 
 
-.column {
-	backgroud-color: blue;
-	float: left;
-	width: 33%;
-	padding: 5px;
-	height: 200px;
-}
 
-.row::after {
-	content: "";
-	clear: both;
-	display: table;
-}
 
 
 
@@ -183,5 +171,23 @@ li a:hover:not(.active) {
   background-color: #555;
   color: white;
 }
+@viewport {
+	width: device-width;
+	zoom: 1.0;
+}
 
+/*
+.column {
+	backgroud-color: blue;
+	float: left;
+	width: 33%;
+	padding: 5px;
+	height: 200px;
+}
 
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+*/

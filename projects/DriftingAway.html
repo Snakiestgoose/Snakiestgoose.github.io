@@ -5,21 +5,20 @@
     <title>Aaron</title>
     <link rel="stylesheet" href="../testStyle.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
   </head>
 
   <body>
 	<div id="home">
 	  <ul>
-		<li><a href="#home">Aaron</a></li>
-		<li><a href="#projects">Projects</a></li>
+		<li><a href="../index.html">Aaron</a></li>
+		<li><a href="../index.html#projects">Projects</a></li>
 		<li><a href="#contact">Contact</a></li>
-		<li><a href="resume.pdf" target="_blank">Resume</a></li>
+		<li><a href="../resume.pdf" target="_blank">Resume</a></li>
 	  </ul>
 	</div>
-
-	<div>
 	
-	</div>
+	<div style="background-color: black; top: 50px;"></div>
 
 
     <div id="about" class="parent">
@@ -52,63 +51,70 @@
 	  </table>
 	</div>
 	
-	<p class="text">
-	  Game Description and such.<br>
-	  Houndoom walrein yanmega tornadus gurdurr piloswine pelipper. 
-	  Larvitar tirtouga terrakion armaldo budew. Weepinbell torchic 
-	  deino ludicolo darkrai cryogonal beedrill squirtle sigilyph kadabra. 
-	  Steelix marshtomp marshtomp emboar
-	</p>
+	<div id="overview" class="parent">
+	    <div class="title"><h1>Overview</h1></div>
+	</div>
+	<div>
+	  <p class="text">
+		Game Description and such.<br>
+		Houndoom walrein yanmega tornadus gurdurr piloswine pelipper. 
+		Larvitar tirtouga terrakion armaldo budew. Weepinbell torchic 
+		deino ludicolo darkrai cryogonal beedrill squirtle sigilyph kadabra. 
+		Steelix marshtomp marshtomp emboar
+	  </p>
+	</div>
 
-	<!--Separate div for title
-	Container for whole section 
-		row	
-			column for picture and text section
-				link with image
-				tag container
-				description container-->
-<!--<div class="projectContainer">
+	<div>
+	  <iframe width="560" height="315" src="https://www.youtube.com/embed/RTnkRTYYvg4" 
+	  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+	  allowfullscreen></iframe>
+	</div>
 	
-		<div>
-		  <div class="thumbnail">
-			<a href="projects.html"><img src="../img/PreviewSpaceShooter.png" 
-			  alt="Space Shooter Game Screen shot"
-			  style="width:100%; hieght:300px;"></a>
-		  </div>
-		  <div>Text about the project.</div>
-		</div>
-		<div>
-		  <div class="thumbnail">
-			<a href="projects.html"><img src="../img/PreviewDrifting.png" 
-			  alt="Drifting Away Typing Game screen shot"
-			  style="width:100%; hieght:300px;"></a>
-		  </div>
-		  <div>Text about the project.</div>
-		</div>
-		<div>
-		  <div class="thumbnail">
-			<a href="projects.html"><img src="../img/PreviewRobotLove.png" 
-			alt="Space Robot Game Jam Game"
-			  style="width:100%; hieght:300px;"></a>
-		  </div>
-		  <div>Text about the project.</div>
-		</div>
-		<div>
-		  <div class="thumbnail">
-			<a href="projects.html"><img src="../img/PreviewRobotLove.png" 
-			alt="Space Robot Game Jam Game"
-			  style="width:100%; hieght:300px;"></a>
-		  </div>
-		  <div>Text about the project.</div>
-		</div>
-
-	  </div> 
-	</div>		-->
+	
+	<div style="padding: 40px;">
+	  <button class="collapse">Mechanics</button>
+	  <div class="panel">
+		<p>Lorem ipsum</p>
+	  </div>
+	
+	  <button class="collapse">Dynamics</button>
+	  <div class="panel">
+		<p>Lorem ipsum</p>
+	  </div>
+	
+	
+	  <button class="collapse">Aesthetics</button>
+	  <div class="panel">
+		<p>Lorem ipsum</p>
+	  </div>
+	</div>
+	
 	
 	<div id="contact" class="title">
 	  <h3>Contact</h3>
 	  <p style="text-align: center">My info and social links or icons.</p>
+	</div>
+	
+	<script>
+		var acc = document.getElementsByClassName("collapse");
+		var i;
 
+		for (i = 0; i < acc.length; i++) 
+		{
+			acc[i].addEventListener("click", function() 
+			{
+				this.classList.toggle("active");
+				var panel = this.nextElementSibling;
+				if (panel.style.display === "block") {
+					panel.style.display = "none";
+				}		 
+				else {
+					panel.style.display = "block";
+				}
+			});
+		}
+	</script>
+	
   </body>
 
 

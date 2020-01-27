@@ -54,13 +54,12 @@
 	background-color: #f1f1f1;
 	overflow: hidden;
 }
-.projectContainer > .thumbnail {
 
-}
 .projectContainer > div {
 	background-color: #f1f1f1;
-	width: 33.3%;
-	min-width: 300px;
+	width: 33%;
+	min-width: 200px;
+	max-width: 500px;
 
 	text-align: center;
 	line-height: 25px;
@@ -68,10 +67,11 @@
 }
 
 .thumbnail {
-	padding: 25px;
+	/*padding: 25px;*/
+	margin: 10px;
 }
 .thumbnail a:hover {
-	padding: 15px;
+	margin: 5px;
 	
 }
 .headerImage {
@@ -84,35 +84,6 @@
 td {
 	padding: 10px;
 }
-
-/* Panels */
-.collapse {
-	display: block;
-	width: 50%;
-	margin: auto;
-	background-color: #eee;
-	color: #444;
-	cursor: pointer;
-	padding: 18px;
-	text-align: left;
-	border: none;
-	outline: none;
-	transition: 0.4s;
-}
-.active, .collapse:hover {
-	backgroud-color: #ccc;
-}
-.panel {
-	width: 45%;
-	margin: auto;
-	padding: 0 18px;
-	background-color: #777;
-	display: none;
-	overflow: hidden;
-}
-
-
-
 
 body {
 /*  background: #354349; */
@@ -163,13 +134,43 @@ video {
 }
 iframe {
 	display: block;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 	width: 50%;
 }
 
 
+/* Panels */
+.collapse {
+	margin: 20px auto;
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	text-align: left;
+	transition: 0.4s;
+}
+.active, .collapse:hover {
+	backgroud-color: #ccc;
+}
+.panel {
+	width: 45%;
+	margin: auto;
+	padding: 0 18px;
+	display: none;
+	overflow: hidden;
+}
+ul.noType {
+	list-style-type: none;
+	display: inline;
+}
+.noType > li {
+	display: inline;
+}
+
+
 /* Navigation Bar */
-ul {
+ul.navBar {
   display: inline-block;
   z-index: 1;
   position: fixed;
@@ -183,7 +184,7 @@ ul {
   right:0px;
 }
 
-li {
+li.nav {
   float: left;
   position: relative;
 }

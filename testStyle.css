@@ -14,13 +14,13 @@
 }
 
 #about {
-	background: #6b8793;
 	margin: 0px auto;
 }
 
 #contact {
 	width: 100%;
 	background: #6b8793;
+	margin-top: 20px;
 }
 
 /* Classes */
@@ -33,7 +33,6 @@
 	font-size: 15px;
 }
 .text {
-	background-color: white;
 	color: black;
 	width: 80%;
 	padding-right: 10%;
@@ -51,12 +50,10 @@
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	background-color: #f1f1f1;
 	overflow: hidden;
 }
 
 .projectContainer > div {
-	background-color: #f1f1f1;
 	width: 33%;
 	min-width: 200px;
 	max-width: 500px;
@@ -86,7 +83,7 @@ td {
 }
 
 body {
-/*  background: #354349; */
+  background-color: #f1f1f1;
   height: 100%;
   width: 100%;
   margin: 0;

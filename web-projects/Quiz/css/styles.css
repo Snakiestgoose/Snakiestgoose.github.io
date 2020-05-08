@@ -1,0 +1,122 @@
+html {
+    position:relative; 
+    min-height: 100%;
+}
+/*Text*/
+h2 {
+    font-size: large;
+    font-weight: bold;
+    padding: 5px;
+}
+p {
+    font-size: medium;
+    padding: 5px;
+}
+/*Form*/
+fieldset {
+    background-color: blanchedalmond;
+    border: #222222;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 100px;
+}
+
+body {
+    background-color: grey;
+}
+img {
+    height: 100%;
+}
+
+/*ID's*/
+#topbar {
+    width: 100%;
+    height: 4vh;
+    padding-bottom: 10 px;
+    background-color: #222222;
+}
+#topbar a {
+    margin-left: 45%;
+    color: white;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 17px;
+}
+#searchbox {
+    width: 100%;
+    height: 100px;
+    padding-bottom: 10 px;
+    background-color: aqua;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#searchbar {
+    padding: 5px;
+}
+#quiz-section {
+    height: auto;
+    margin: 50px 50px 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+/*Classes*/
+.quiz-container {
+    height: 100px;
+    background-color: aquamarine;
+    width: 80%;
+    margin: 10px auto 10px;
+    display: flex;
+}
+.quiz-preview {
+    background-color: dodgerblue;
+    margin: 5px;
+    width: 10%;
+}
+.quiz-text {
+    width: 70%;
+    margin: 5px;
+    margin-left: 15%;
+    background-color: chocolate;
+}
+.footer {
+    height: 5vh;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    background-color: cadetblue;
+    display: flex;
+    margin-top: auto;
+}
+.footer a {
+    height: 75%;
+    margin: 5px;
+    margin-bottom: auto;
+    margin-top: auto; 
+    padding: 5px;
+}
+.quiz-image {
+    height: 50vh;
+    max-width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   
+}
+.flex-container-row {
+    display: flex;
+    flex-direction: row;
+}
+.quiz-question {
+    margin-left: 50px;
+}
+.quiz-button {
+    padding: 10px;
+    background-color: lightgreen;
+    margin-left: 50%;
+}

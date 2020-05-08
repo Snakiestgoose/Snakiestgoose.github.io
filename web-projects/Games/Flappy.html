@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flappy</title>
+        <style>
+            #canvasContainer {
+                text-align: center;
+            }
+        </style>
+        <script>
+            var canvas;
+            var ctx;
+
+            const WALL_WIDTH = 10;
+            const PLAYER_WIDTH = 50;
+            const WALL_SPAWN = 5000;
+
+            var buffer = 50;
+            var score = 0;
+            var gameover = false;
+
+            var wallList = [];
+
+            window.addEventListener('load', init);
+            
+            function Wall() {
+                this.x = canvas.width;
+                this.width = WALL_WIDTH;
+
+                this.topY = 0;
+                this.bottomHeight = Math.random() * Math.floor(canvas.height - PLAYER_WIDTH - buffer);
+                this.bottomY = canvas.height - this.bottomHeight;
+                this.topHeight =  canvas.height - this.bottomHeight - buffer - PLAYER_WIDTH;
+
+                this.safeTop = 0 + this.topHeight;
+                this.safeBottom = this.bottomY;
+
+                this.drawWalls = function() {
+                    drawRect(this.x, this.topY, this.width, this.topHeight, 'white');
+                    drawRect(this.x, this.bottomY, this.width, this.bottomHeight, 'white');
+                }                     
+            }
+
+            function calculateMousePos(evt) {
+                var rect = canvas.getBoundingClientRect();
+                var root = document.documentElement;
+                var mouseX = evt.clientX - rect.left - root.scrollLeft;
+                var mouseY = evt.clientY - rect.top - root.scrollTop;
+                return {
+                    x:mouseX,
+                    y:mouseY
+                };
+            }
+
+            function init() {
+                canvas = document.getElementById("gameCanvas");
+                ctx = canvas.getContext('2d');
+                let player = {
+                    x : 10, 
+                    y : canvas.height - PLAYER_WIDTH - 10, 
+                    width : PLAYER_WIDTH, 
+                    height : PLAYER_WIDTH,
+                    drawPlayer : function () {
+                        drawRect(player.x, player.y, player.width, player.height, 'white');
+                    }
+                }
+                update();
+                addWall();
+
+                var fps = 30;
+                
+                setInterval(function() {
+                    // game controller 
+                    update();
+                    player.drawPlayer();
+
+                    if (gameover)
+                        return;
+                    
+                    for (var i = 0; i < wallList.length; i++)
+                    {
+                        if (wallList[0].x <= 0)
+                            wallList.shift();
+                        wallList[i].x -= 2;
+                        wallList[i].drawWalls();
+                    }
+                    if (wallList[0] != undefined)
+                        if (wallList[0].x + PLAYER_WIDTH >= player.x && 
+                            wallList[0].x <= player.x + PLAYER_WIDTH) {
+                                if (player.y >= wallList[0].safeTop && player.y + PLAYER_WIDTH <= wallList[0].safeBottom)
+                                    score++;
+                                else
+                                    gameover = true;
+                            }
+                            
+                    }, 1000/fps);
+                
+                if (!gameover)
+                    setInterval(addWall, WALL_SPAWN);
+
+                // Mouse event listeners
+                canvas.addEventListener('mousemove', function(evt) {
+                    var mousePos = calculateMousePos(evt);
+                    player.y = mousePos.y - PLAYER_WIDTH/2;
+                });
+                canvas.addEventListener('mousedown', function(evt) {
+                    if (gameover)
+                    {
+                        score = 0;
+                        gameover = false;
+                    }
+                });
+            }
+
+            function update() {
+                drawRect(0, 0, canvas.width, canvas.height, 'black');
+                ctx.fillStyle = 'white';
+                ctx.font = "20px Arial";
+                ctx.fillText("Score: " + score, canvas.width - 100, 100);
+            }
+
+            function drawRect(x, y, width, height, color) {
+                ctx.fillStyle = color;
+                ctx.fillRect(x, y, width, height);
+            }
+
+            function addWall() {
+                let wall = new Wall();
+                wallList.push(wall);
+            }
+            
+
+        </script>
+    </head>
+    <body style="background-color: darkgray;">
+        <div id="canvasContainer">
+            <canvas id="gameCanvas" width="800", height="600"></canvas>
+        </div>
+    </body>
+</html>

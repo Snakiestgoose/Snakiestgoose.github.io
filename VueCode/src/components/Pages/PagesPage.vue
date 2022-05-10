@@ -1,8 +1,6 @@
 <template>
     <div>
-        <p>{{selectedPage}}</p>
         <!-- Switch between pages -->
-        
         <HomePage v-if="selectedPage == 'HomePage'"></HomePage>
         <ProjectsPage v-else-if="selectedPage == 'ProjectsPage'"></ProjectsPage>
         <AboutPage v-else-if="selectedPage == 'AboutPage'"></AboutPage>

@@ -3,7 +3,13 @@
         <p>ABOUT</p>
         <img alt="Vue logo" src="../../assets/terrariaguide.png">
 
-        <p>It's a me, Aaron</p>
+        <b-container>
+          <b-row>
+            <b-col>
+              <p>It's a me, Aaron</p>
+            </b-col>
+          </b-row>
+        </b-container>
         
         <h4>Education</h4>
         <p>I school.</p>

@@ -38,7 +38,7 @@ export default {
   },
   data() {
       return {
-          selectedPage: "ProjectsPage"
+          selectedPage: "AboutPage"
       }
   }
 }
@@ -60,7 +60,11 @@ export default {
   background-color: darkgray;
 }
 html, body {
-  height: 100%;
   margin: 0;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+}
+body {
+
 }
 </style>

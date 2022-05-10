@@ -2,9 +2,21 @@
     <div>
         <p>PROJECTS</p>
          <b-button-group class="mb-5">
-          <b-button @click="projectType = 'work'" class="padding-width">Work</b-button>
-          <b-button @click="projectType = 'personal'" class="padding-width">Personal</b-button>
-          <b-button @click="projectType = 'school'" class="padding-width">School</b-button>
+          <b-button 
+            :pressed="projectType == 'work'" 
+            @click="projectType = 'work'" 
+            class="padding-width">Work
+          </b-button>
+          <b-button 
+            :pressed="projectType == 'personal'" 
+            @click="projectType = 'personal'" 
+            class="padding-width">Personal
+          </b-button>
+          <b-button 
+            :pressed="projectType == 'school'" 
+            @click="projectType = 'school'" 
+            class="padding-width">School
+          </b-button>
         </b-button-group>
         <b-container class="bv-example-row">
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->

@@ -70,7 +70,7 @@ export default {
 html, body {
   margin: 0;
   height: 100%;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(221, 221, 221, 0.1);
 }
 body {
 

@@ -1,19 +1,30 @@
 <template>
     <div>
         <b-card
-            :title="title"
-            img-src="https://picsum.photos/600/300/?image=25" 
-            img-alt="Image"
-            img-top
+            :sub-title="title"
             tag="article"
             style="max-width: 15rem; max-height: 15rem; "
-            class="mb-2 overflow-auto"
+            class="mb-2 mt-4 overflow-auto"
         >
+            <b-card-img
+                
+                :src="'./assets/ProjectImages/' + imgLink" 
+                alt="Image"
+                top
+                style="max-height:100px;width:auto;"
+            >
+                
+            </b-card-img>
             <b-card-text>
                 {{cardText}}
             </b-card-text>
 
-            <b-button href="#" variant="primary">Go somewhere</b-button>
+            <b-button 
+                @click="openModal" 
+                v-b-modal.modal-1 
+                variant="primary">
+                Go somewhere
+            </b-button>
         </b-card>
     </div>
 </template>
@@ -28,6 +39,11 @@ export default {
   },
   components: {
 
+  },
+  methods: {
+      openModal() {
+        this.$emit("set-modal-values", this.title)
+      }
   }
 }
 </script>

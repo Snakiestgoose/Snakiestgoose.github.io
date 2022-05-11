@@ -17,7 +17,10 @@
                 </b-collapse>
             </b-navbar>
             
-            <PagesPage v-bind:selectedPage="selectedPage"></PagesPage>
+            <PagesPage 
+              v-bind:selectedPage="selectedPage"
+              v-on:change-selected-page="changeSelectedPage">
+            </PagesPage>
         </div>
         
         <footer class="footer">
@@ -38,8 +41,13 @@ export default {
   },
   data() {
       return {
-          selectedPage: "AboutPage"
+          selectedPage: "ProjectsPage"
       }
+  },
+  methods: {
+    changeSelectedPage(value) {
+      this.selectedPage = value
+    }
   }
 }
 </script>

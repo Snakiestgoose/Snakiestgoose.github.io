@@ -3,7 +3,7 @@
         <b-card
             :sub-title="title"
             tag="article"
-            style="max-width: 15rem; max-height: 15rem; "
+            style="width: 15rem; height: 15rem; "
             class="mb-2 mt-4 overflow-auto"
         >
             <b-card-img
@@ -11,11 +11,11 @@
                 :src="'./assets/ProjectImages/' + imgLink" 
                 alt="Image"
                 top
-                style="max-height:100px;width:auto;"
+                style="height:90px;width:auto;"
             >
-                
             </b-card-img>
-            <b-card-text>
+            
+            <b-card-text class="mt-3 mb-1">
                 {{cardText}}
             </b-card-text>
 
@@ -23,7 +23,7 @@
                 @click="openModal" 
                 v-b-modal.modal-1 
                 variant="primary">
-                Go somewhere
+                Learn more...
             </b-button>
         </b-card>
     </div>

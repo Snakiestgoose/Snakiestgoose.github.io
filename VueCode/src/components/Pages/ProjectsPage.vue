@@ -21,7 +21,7 @@
         <b-container class="bv-example-row">
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
           <!-- Personal Projects -->
-          <b-row v-if="projectType == 'personal'">
+          <b-row v-if="projectType == 'personal'" class="justify-content-center">
             <b-col cols="6" md="4">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
@@ -43,7 +43,7 @@
                 v-on:set-modal-values="setModalValues"
                 v-bind:title="'Melrose Game Jam 2019'"
                 v-bind:cardText="'Unity, C#'"
-                v-bind:imgLink="'ggj_logo.png'"
+                v-bind:imgLink="'melrose.png'"
               ></ProjectBox>
             </b-col>
             <b-col cols="6" md="4">
@@ -56,40 +56,32 @@
             </b-col>
           </b-row>
           <!-- Work Projects -->
-          <b-row v-if="projectType == 'work'">
+          <b-row v-if="projectType == 'work'" class="justify-content-center">
             <b-col cols="6" md="4">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
                 v-bind:title="'Auto-Provisioning'"
-                v-bind:cardText="'C#, MySQL, Project Mgmt.'"
+                v-bind:cardText="'C#, MySQL, Proj Mgmt'"
                 v-bind:imgLink="'quaver_ap.png'"
               ></ProjectBox>
             </b-col>
             <b-col cols="6" md="4">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
-                v-bind:title="'Thin Common Cartridge'"
+                v-bind:title="'Thin CC'"
                 v-bind:cardText="'C#, MySQL, React'"
                 v-bind:imgLink="'tcc_logo.png'"
               ></ProjectBox>
             </b-col>
           </b-row>
           <!-- School Projects -->
-          <b-row v-if="projectType == 'school'">
+          <b-row v-if="projectType == 'school'" class="justify-content-center">
             <b-col cols="6" md="4">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
                 v-bind:title="'Space Game'"
                 v-bind:cardText="'Unity, C#'"
                 v-bind:imgLink="'space_shooter.png'"
-              ></ProjectBox>
-            </b-col>
-            <b-col cols="6" md="4">
-              <ProjectBox 
-                v-on:set-modal-values="setModalValues"
-                v-bind:title="'Platformer Game'"
-                v-bind:cardText="'Unity, C#'"
-                v-bind:imgLink="'platformer_UFO.png'"
               ></ProjectBox>
             </b-col>
             <b-col cols="6" md="4">
@@ -180,69 +172,74 @@
               </div>
               <div v-else-if="currentTitle == 'Indie Galactic Space Jam'">
                 <span>
-                  This project isn't quite about Geese achieving soveriegnty, at least not yet. 
-                  To review the code on GitHub, click the link below. 
+                  The Indie Galactic Space Jam was my first Game Jam. I worked on a team to create 
+                  an upbeat rythm game called Space Robots: The Shape of Love where you ucontrol to rotating pieces 
+                  to complete constelations. <br>
+                  It was my first time working in Unreal Engine and C++, and I had dove in with the lead programmer 
+                  and learned a lot over the weekend of working on the project. The first task I helped set up was 
+                  establishing source control for the team using Perforce, and then worked under the lead on supporting 
+                  tasks for the rest of the jam. 
                 </span><br><br>
-                <p>GitHub: 
-                  <a href="https://github.com/Snakiestgoose/SovereignGeese">
-                    Soveriegn_Geese
+                <p>Itchi.io: 
+                  <a href="https://soundisme.itch.io/space-robots-the-shape-of-love">
+                    Space Robots
                   </a>
                 </p>
               </div>
               <!-- School -->
               <div v-else-if="currentTitle == 'Space Game'">
                 <span>
-                  This project isn't quite about Geese achieving soveriegnty, at least not yet. 
-                  To review the code on GitHub, click the link below. 
+                  This is a school project following a Unity tutorial where we were then required to branch 
+                  off from the tutorial and add extra functionality. I had created a Galaga styled space shooter 
+                  where the player had extra abilities such as a force field and exta game modes.
                 </span><br><br>
                 <p>GitHub: 
-                  <a href="https://github.com/Snakiestgoose/SovereignGeese">
-                    Soveriegn_Geese
-                  </a>
-                </p>
-              </div>
-              <div v-else-if="currentTitle == 'Platformer Game'">
-                <span>
-                  This project isn't quite about Geese achieving soveriegnty, at least not yet. 
-                  To review the code on GitHub, click the link below. 
-                </span><br><br>
-                <p>GitHub: 
-                  <a href="https://github.com/Snakiestgoose/SovereignGeese">
+                  <a href="https://github.com/Snakiestgoose/Tutorial-3-Space-Shooter">
                     Soveriegn_Geese
                   </a>
                 </p>
               </div>
               <div v-else-if="currentTitle == 'Javascript Games'">
                 <span>
-                  This project isn't quite about Geese achieving soveriegnty, at least not yet. 
-                  To review the code on GitHub, click the link below. 
+                  This is a collection of a few games I created solely with Javascript that are 
+                  playable in browser. These include recreations of snake, pong, 
+                  a galaga like space shooter, and flappy bird. 
                 </span><br><br>
                 <p>GitHub: 
-                  <a href="https://github.com/Snakiestgoose/SovereignGeese">
-                    Soveriegn_Geese
+                  <a href="https://github.com/Snakiestgoose/Web-Projects/tree/master/Games">
+                    Javascript Games
                   </a>
                 </p>
               </div>
               <!-- Work -->
               <div v-else-if="currentTitle == 'Auto-Provisioning'">
                 <span>
-                  This project isn't quite about Geese achieving soveriegnty, at least not yet. 
-                  To review the code on GitHub, click the link below. 
-                </span><br><br>
-                <p>GitHub: 
-                  <a href="https://github.com/Snakiestgoose/SovereignGeese">
-                    Soveriegn_Geese
-                  </a>
-                </p>
+                  This is a project I headed while worked as a developer at QuaverEd. When a user logs in 
+                  through Quaver's Single-Sign-On portals, they then had to provision their account to a 
+                  Quaver account. This Auto-Provisioning project allowed for districts to either send Roster 
+                  info to allow us to automatically create an account under the school they are listed in in their 
+                  rosters, or to see a school selection popup and select their schools and then be automatically 
+                  connected to a Quaver account. <br>
+                  This project was a direct request with a client from a district whomst I worked with and with my 
+                  team to deliver the feature to their standards. 
+                </span>
               </div>
-              <div v-else-if="currentTitle == 'Thin Common Cartridge'">
+              <div v-else-if="currentTitle == 'Thin CC'">
                 <span>
-                  This project isn't quite about Geese achieving soveriegnty, at least not yet. 
-                  To review the code on GitHub, click the link below. 
+                  This project was also for QuaverEd, where I built an app to export a district's valid 
+                  resources into a Thin Common Cartridge (TCC) that can then be imported into their 
+                  Learning Management System (LMS). 'Common Cartridge is a set of open standards that
+                  enable interoperability between content and systems.' imsglobal. TCC is the thin version of 
+                  Common Cartridge that provides a more lightweight structure and contains only links to the resources 
+                  rather that packaging learning resources into the cartridge. <br>
+                  The app that exported the cartridge exported the resources into a large xml file called the manifest, 
+                  where depending on the TCC version the user wished to download, would either contain all of the resource 
+                  tags in the file or would link out to external resource xml files. At the end it is all zipped together 
+                  and can then be exported into a LMS such as Schoology. 
                 </span><br><br>
-                <p>GitHub: 
-                  <a href="https://github.com/Snakiestgoose/SovereignGeese">
-                    Soveriegn_Geese
+                <p>IMSGlobal: 
+                  <a href="http://www.imsglobal.org/activity/common-cartridge">
+                    Common Cartridge
                   </a>
                 </p>
               </div>

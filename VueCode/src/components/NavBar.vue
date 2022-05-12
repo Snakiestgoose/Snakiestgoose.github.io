@@ -1,7 +1,12 @@
 <template>
     <div class="boxxy">
         <div class="content">
-            <b-navbar toggleable="lg" type="dark" variant="info" class="mb-5">
+            <b-navbar 
+              toggleable="lg" 
+              type="light" 
+              style="background-color:#7DA2A9;" 
+              class="mb-5">
+
                 <b-navbar-brand href="#">Aaron Hobgood</b-navbar-brand>
 
                 <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -24,7 +29,33 @@
         </div>
         
         <footer class="footer">
-            <p>Email: </p>
+          <b-container>
+            <b-row>
+              <b-col style="align-self: center;">
+                <a href = "mailto: ahobgood.dev@gmail.com?subject=Portfolio Inquiry">Send Email</a>
+              </b-col>
+              <b-col>
+              <a target="_blank" 
+                href="https://www.linkedin.com/in/aaronhobgood/"
+                > 
+                <img alt="LinkedIn" 
+                  class=""
+                  style="width:30px;"
+                  src="../assets/linkedin-brands.svg">
+              </a>
+            </b-col>
+            <b-col>
+              <a target="_blank" 
+                href="https://github.com/Snakiestgoose"
+                >
+                <img alt="GitHub" 
+                  class=""
+                  style="width:30px;"
+                  src="../assets/github-brands.svg">
+              </a>
+            </b-col>
+            </b-row>
+          </b-container>
         </footer>
     </div>
 </template>
@@ -41,7 +72,7 @@ export default {
   },
   data() {
       return {
-          selectedPage: "HomePage"
+          selectedPage: "ProjectsPage"
       }
   },
   methods: {
@@ -54,8 +85,7 @@ export default {
 
 <style>
 .content {
-  min-height: 100%;
-  padding-bottom: 50px;
+  min-height: calc(100vh - 70px);
 }
 .boxxy {
     position: absolute;
@@ -63,14 +93,12 @@ export default {
     display: block;
 }
 .footer {
-  height: 50px;
-  margin-top: -50px;
-  background-color: darkgray;
+  padding: 18px;
+  background-color: #7DA2A9;
 }
 html, body {
   margin: 0;
-  height: 100%;
-  background-color: rgba(221, 221, 221, 0.1);
+  min-height: calc(100vh - 70px);
 }
 body {
 

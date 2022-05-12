@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>RESUME</p>
+        <h2>RESUME</h2>
 
         <b-container>
           <b-row>
@@ -15,7 +15,7 @@
             </b-col>
             <b-col>
               <a target="_blank" 
-                href="https://drive.google.com/file/d/1jYnphSat8tGfvfPKMfJLLZI3o6yTV4dh/view?usp=sharing"
+                href="https://drive.google.com/file/d/1RaxlG5Fh2V0vzQwEh_u8ESN3a2TCBcT4/view?usp=sharing"
                 > 
                 <img alt="Resume Download" 
                   class=""

@@ -1,31 +1,34 @@
 <template>
     <div>
-        <b-card
-            :sub-title="title"
-            tag="article"
-            style="width: 15rem; height: 15rem; "
-            class="mb-2 mt-4 overflow-auto"
-        >
-            <b-card-img
-                
-                :src="'./assets/ProjectImages/' + imgLink" 
-                alt="Image"
-                top
-                style="height:90px;width:auto;"
+        <div class="m-3">
+            <b-card
+                :sub-title="title"
+                tag="article"
+                style="width: 13rem; height: 15rem; "
+                class="mb-2 mt-4"
             >
-            </b-card-img>
-            
-            <b-card-text class="mt-3 mb-1">
-                {{cardText}}
-            </b-card-text>
+                <b-card-img
+                    
+                    :src="'./assets/ProjectImages/' + imgLink" 
+                    alt="Image"
+                    top
+                    style="height:90px;width:auto;max-width: 10rem;"
+                >
+                </b-card-img>
+                
+                <b-card-text class="mt-3 mb-1">
+                    {{cardText}}
+                </b-card-text>
 
-            <b-button 
-                @click="openModal" 
-                v-b-modal.modal-1 
-                variant="primary">
-                Learn more...
-            </b-button>
-        </b-card>
+                <b-button 
+                    @click="openModal" 
+                    v-b-modal.modal-1 
+                    variant="primary">
+                    Learn more...
+                </b-button>
+            </b-card>
+        </div>
+        
     </div>
 </template>
 

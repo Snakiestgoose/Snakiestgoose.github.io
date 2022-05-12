@@ -1,15 +1,18 @@
 <template>
   <div>
-    <p>HOME</p>
-    <img alt="Me, Aaron" src="../../assets/terrariaguide.png">
+    <h2>HOME</h2>
+    <img style="height: 20rem;" alt="Me, Aaron" src="../../assets/me.jpg">
     <p>It's a me, Aaron.</p>
 
-    <b-container class="text-left">
+    <b-container class="text-left" style="width:80%">
       <b-row>
         <b-col>
 
           <p>I'm a software developer, I enjoy developing my developer career, 
-            and I hope this site can be a place to share that development.</p>
+            and I hope this site can be a place to share that development.<br>
+            This site is a VueJs page that I put together for fun. 
+            I didn't go too crazy on the CSS, but I hope to slowly build more onto it.
+          </p>
           
           <p>To learn more about me, check out the 
             <a href="#" @click.prevent="onPageChangeClick('AboutPage')">

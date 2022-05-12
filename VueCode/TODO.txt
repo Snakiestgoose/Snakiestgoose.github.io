@@ -1,0 +1,7 @@
+TODO:
+
+
+CSS:
+    - Change color scheme
+        - NavBar color
+        - Footer color

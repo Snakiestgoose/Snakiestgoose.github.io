@@ -72,7 +72,7 @@ export default {
   },
   data() {
       return {
-          selectedPage: "ProjectsPage"
+          selectedPage: "HomePage"
       }
   },
   methods: {

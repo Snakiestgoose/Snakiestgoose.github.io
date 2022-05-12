@@ -146,8 +146,8 @@
                   I was ony able to finish enough to have the functionality of each mode playable 
                   in an arcade mode of sorts. Though it was a lot of fun to take on such an ambitious 
                   project and still have anything to show over the course of a weekend. <br>
-                  <div>
-                    <iframe width="fit-content" height="auto" 
+                  <div class="text-center mt-3">
+                    <iframe width="auto" height="auto" 
                       src="https://www.youtube.com/embed/dAUI1ZEhkmY" 
                       title="YouTube video player" 
                       frameborder="0" 
@@ -191,7 +191,7 @@
                 <span>
                   This is a school project following a Unity tutorial where we were then required to branch 
                   off from the tutorial and add extra functionality. I had created a Galaga styled space shooter 
-                  where the player had extra abilities such as a force field and exta game modes.
+                  where the player had extra abilities such as a force field and extra game modes.
                 </span><br><br>
                 <p>GitHub: 
                   <a href="https://github.com/Snakiestgoose/Tutorial-3-Space-Shooter">

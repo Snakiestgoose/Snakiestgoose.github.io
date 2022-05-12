@@ -2,10 +2,10 @@
     <div>
         <h2>ABOUT</h2>
         <div>
-          <img style="width:60%" alt="Vue logo" src="../../assets/animal_crossing.jpg">
+          <img style="width:60%; max-width: 600px;" alt="Vue logo" src="../../assets/animal_crossing.jpg">
         </div>
 
-        <b-container class="text-left mt-5 mb-5">
+        <b-container class="text-left mt-4 mb-5">
           <b-row>
             <b-col>
               <p>Hi, my name is Aaron and this page is all about me. 

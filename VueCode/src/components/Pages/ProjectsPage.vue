@@ -22,7 +22,7 @@
         <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
           <!-- Personal Projects -->
           <b-row v-if="projectType == 'personal'" class="justify-content-center">
-            <b-col cols="6" md="4">
+            <b-col lg="4" md="6" sm="12">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
                 v-bind:title="'Personal Website'"
@@ -30,7 +30,7 @@
                 v-bind:imgLink="'personal_site.png'"
               ></ProjectBox>
             </b-col>
-            <b-col cols="6" md="4">
+            <b-col lg="4" md="6" sm="12">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
                 v-bind:title="'Soveriegn_Geese'"
@@ -38,7 +38,7 @@
                 v-bind:imgLink="'sovereign_goose.jpg'"
               ></ProjectBox>
             </b-col>
-            <b-col cols="6" md="4">
+            <b-col lg="4" md="6" sm="12">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
                 v-bind:title="'Melrose Game Jam 2019'"
@@ -46,7 +46,7 @@
                 v-bind:imgLink="'melrose.png'"
               ></ProjectBox>
             </b-col>
-            <b-col cols="6" md="4">
+            <b-col lg="4" md="6" sm="12">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
                 v-bind:title="'Indie Galactic Space Jam'"
@@ -57,7 +57,7 @@
           </b-row>
           <!-- Work Projects -->
           <b-row v-if="projectType == 'work'" class="justify-content-center">
-            <b-col cols="6" md="4">
+            <b-col lg="4" md="6" sm="12">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
                 v-bind:title="'Auto-Provisioning'"
@@ -65,7 +65,7 @@
                 v-bind:imgLink="'quaver_ap.png'"
               ></ProjectBox>
             </b-col>
-            <b-col cols="6" md="4">
+            <b-col lg="4" md="6" sm="12">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
                 v-bind:title="'Thin CC'"
@@ -76,7 +76,7 @@
           </b-row>
           <!-- School Projects -->
           <b-row v-if="projectType == 'school'" class="justify-content-center">
-            <b-col cols="6" md="4">
+            <b-col lg="4" md="6" sm="12">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
                 v-bind:title="'Space Game'"
@@ -84,7 +84,7 @@
                 v-bind:imgLink="'space_shooter.png'"
               ></ProjectBox>
             </b-col>
-            <b-col cols="6" md="4">
+            <b-col lg="4" md="6" sm="12">
               <ProjectBox 
                 v-on:set-modal-values="setModalValues"
                 v-bind:title="'Javascript Games'"

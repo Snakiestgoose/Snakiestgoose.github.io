@@ -5,7 +5,7 @@
                 :sub-title="title"
                 tag="article"
                 style="width: 13rem; height: 15rem; "
-                class="mb-2 mt-4"
+                class="mb-2 mt-4 m-auto"
             >
                 <b-card-img
                     
